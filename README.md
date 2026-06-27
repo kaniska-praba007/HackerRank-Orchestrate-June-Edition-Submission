@@ -1,5 +1,3 @@
-Here's a polished, submission-ready README optimized for a HackerRank review. It keeps the technical depth while making the architecture and engineering decisions immediately visible.
-
 # 🚗💻📦 Multi-Modal Evidence Review System
 
 An AI-powered claim verification system that determines whether submitted image evidence **supports**, **contradicts**, or provides **insufficient information** to evaluate insurance and damage claims involving:
