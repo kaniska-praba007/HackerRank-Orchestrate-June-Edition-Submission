@@ -1,0 +1,386 @@
+PS C:\Users\Der Krieger Goose\Downloads\hackerrank-orchestrate-june26-main\Multi-Modal Orchestrate> ^C
+PS C:\Users\Der Krieger Goose\Downloads\hackerrank-orchestrate-june26-main\Multi-Modal Orchestrate> python -m code.main run --claims dataset/claims.csv --history dataset/user_history.csv --requirements dataset/evidence_requirements.csv --output output/output.csv
+2026-06-20 10:29:43 | INFO     | evidence_review | Starting pipeline
+Loaded 44 claims from claims.csv
+Loaded 47 user history records from user_history.csv
+Loaded 11 evidence requirements from evidence_requirements.csv
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:29:43 | INFO     | evidence_review | Processing claim 1/44 for user user_002
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:29:45 | ERROR    | evidence_review | Claim parsing failed after retries: Invalid json output: Here is the JSON requested:
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-20 10:29:45 | INFO     | evidence_review | Parsed intent: unknown on unknown
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:29:46 | INFO     | evidence_review | Loaded 3 images
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:30:16 | INFO     | evidence_review | Visual findings: scratch on ['front bumper', 'grille', 'headlights', 'fog lights', 'windshield', 'license plate', 'side mirror', 'car tire', 'wheel', 'front bumper', 'grille', 'headlight', 'front bumper', 'fender', 'side mirror'], severity=medium
+2026-06-20 10:30:16 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:30:16 | INFO     | evidence_review | Risk flags: none
+2026-06-20 10:30:16 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:30:16 | INFO     | evidence_review | Processing claim 2/44 for user user_005
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:30:18 | INFO     | evidence_review | Parsed intent: dent on door panel
+2026-06-20 10:30:18 | INFO     | evidence_review | Loaded 1 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:30:32 | INFO     | evidence_review | Visual findings: dent on ['door panel', 'door trim', 'rocker panel'], severity=high
+2026-06-20 10:30:32 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the door panel and allows assessment. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:30:32 | INFO     | evidence_review | Risk flags: user_history_risk
+2026-06-20 10:30:32 | INFO     | evidence_review | Claim status: supported – The claimed dent on door panel is visible in image(s): img_1.
+2026-06-20 10:30:32 | INFO     | evidence_review | Processing claim 3/44 for user user_004
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:30:34 | INFO     | evidence_review | Parsed intent: glass_shatter on windshield
+2026-06-20 10:30:34 | INFO     | evidence_review | Loaded 2 images
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:15 | INFO     | evidence_review | Visual findings: glass_shatter on ['windshield', 'windshield', 'dashboard', 'steering wheel', 'rearview mirror', 'sun visor'], severity=high
+2026-06-20 10:31:15 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the windshield and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:31:15 | INFO     | evidence_review | Risk flags: none
+2026-06-20 10:31:15 | INFO     | evidence_review | Claim status: supported – The claimed glass_shatter on windshield is visible in image(s): img_1.
+2026-06-20 10:31:15 | INFO     | evidence_review | Processing claim 4/44 for user user_007
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:18 | INFO     | evidence_review | Parsed intent: missing_part on side mirror
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:18 | INFO     | evidence_review | Loaded 2 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:33 | INFO     | evidence_review | Visual findings: none on ['side mirror', 'front wheel', 'rear wheel', 'side doors', 'windows', 'front fender', 'rear fender', 'headlights', 'taillights', 'roof', 'side skirt', 'wheel', 'tire', 'rim', 'fender', 'car body'], severity=none
+2026-06-20 10:31:33 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the side mirror and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:31:33 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_angle
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:33 | INFO     | evidence_review | Claim status: contradicted – The side mirror is visible in image(s): img_1, but no missing_part is observed. Visible damage does not support the claim.
+2026-06-20 10:31:33 | INFO     | evidence_review | Processing claim 5/44 for user user_008
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:35 | INFO     | evidence_review | Parsed intent: dent on hood
+2026-06-20 10:31:35 | INFO     | evidence_review | Loaded 1 images
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:40 | INFO     | evidence_review | Visual findings: dent on ['hood', 'headlights', 'windshield', 'front grille'], severity=medium
+2026-06-20 10:31:40 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the hood and allows assessment. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:31:40 | INFO     | evidence_review | Risk flags: blurry_image;user_history_risk
+2026-06-20 10:31:40 | INFO     | evidence_review | Claim status: supported – The claimed dent on hood is visible in image(s): img_1.
+2026-06-20 10:31:40 | INFO     | evidence_review | Processing claim 6/44 for user user_003
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:41 | INFO     | evidence_review | Parsed intent: dent on rear bumper
+2026-06-20 10:31:41 | INFO     | evidence_review | Loaded 2 images
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:31:58 | INFO     | evidence_review | Visual findings: dent on ['rear passenger door', 'rear quarter panel', 'rear wheel', 'side skirt', 'front bumper', 'headlight', 'fender', 'hood', 'tire', 'grille guard'], severity=medium
+2026-06-20 10:31:58 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the rear bumper. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:31:58 | INFO     | evidence_review | Risk flags: blurry_image;wrong_object_part
+2026-06-20 10:31:58 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the rear bumper. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:31:58 | INFO     | evidence_review | Processing claim 7/44 for user user_011
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:00 | INFO     | evidence_review | Parsed intent: broken_part on headlight
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:00 | INFO     | evidence_review | Loaded 2 images
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:19 | INFO     | evidence_review | Visual findings: broken_part on ['headlight', 'headlight lens', 'car body', 'headlight', 'front fender', 'hood', 'front bumper', 'wheel'], severity=high
+2026-06-20 10:32:19 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the headlight and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:32:19 | INFO     | evidence_review | Risk flags: none
+2026-06-20 10:32:19 | INFO     | evidence_review | Claim status: supported – The claimed broken_part on headlight is visible in image(s): img_1, img_2.
+2026-06-20 10:32:19 | INFO     | evidence_review | Processing claim 8/44 for user user_004
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:21 | ERROR    | evidence_review | Claim parsing failed after retries: Invalid json output: Here is the JSON requested
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-20 10:32:21 | INFO     | evidence_review | Parsed intent: unknown on unknown
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:21 | INFO     | evidence_review | Loaded 3 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:32:58 | INFO     | evidence_review | Visual findings: dent on ['front door', 'rear door', 'side skirt', 'rear wheel', 'quarter panel', 'bumper', 'tire', 'rear bumper', 'body panel', 'taillight'], severity=high
+2026-06-20 10:32:58 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:32:58 | INFO     | evidence_review | Risk flags: blurry_image
+2026-06-20 10:32:58 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:32:58 | INFO     | evidence_review | Processing claim 9/44 for user user_018
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:00 | INFO     | evidence_review | Parsed intent: crack on taillight
+2026-06-20 10:33:00 | INFO     | evidence_review | Loaded 1 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:12 | INFO     | evidence_review | Visual findings: broken_part on ['front bumper', 'hood', 'front-right headlight', 'front-right fender', 'front wheel', 'tire', 'license plate'], severity=high
+2026-06-20 10:33:12 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the taillight. Requirement: The claimed glass, light, mirror, or component should be visible clearly enough to inspect cracks, breakage, or missing parts.
+2026-06-20 10:33:12 | INFO     | evidence_review | Risk flags: wrong_object_part;claim_mismatch
+2026-06-20 10:33:12 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the taillight. Requirement: The claimed glass, light, mirror, or component should be visible clearly enough to inspect cracks, breakage, or missing parts.
+2026-06-20 10:33:12 | INFO     | evidence_review | Processing claim 10/44 for user user_014
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:13 | INFO     | evidence_review | Parsed intent: crack on windshield
+2026-06-20 10:33:13 | INFO     | evidence_review | Loaded 1 images
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:20 | INFO     | evidence_review | Visual findings: crack on ['windshield', 'steering wheel', 'dashboard', 'rearview mirror', 'A-pillar'], severity=high
+2026-06-20 10:33:20 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the windshield and allows assessment. Requirement: The claimed glass, light, mirror, or component should be visible clearly enough to inspect cracks, breakage, or missing parts.
+2026-06-20 10:33:20 | INFO     | evidence_review | Risk flags: user_history_risk
+2026-06-20 10:33:20 | INFO     | evidence_review | Claim status: supported – The claimed crack on windshield is visible in image(s): img_1.
+2026-06-20 10:33:20 | INFO     | evidence_review | Processing claim 11/44 for user user_017
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:21 | INFO     | evidence_review | Parsed intent: crack on laptop screen
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:21 | INFO     | evidence_review | Loaded 2 images
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:30 | INFO     | evidence_review | Visual findings: glass_shatter on ['screen', 'keyboard', 'trackpad', 'screen', 'keyboard', 'trackpad'], severity=high
+2026-06-20 10:33:30 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the laptop screen and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:33:30 | INFO     | evidence_review | Risk flags: wrong_object_part;claim_mismatch
+2026-06-20 10:33:30 | INFO     | evidence_review | Claim status: supported – The claimed crack on laptop screen is visible in image(s): img_2.
+2026-06-20 10:33:30 | INFO     | evidence_review | Processing claim 12/44 for user user_018
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:32 | INFO     | evidence_review | Parsed intent: water_damage on keyboard
+2026-06-20 10:33:32 | INFO     | evidence_review | Loaded 1 images
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:48 | INFO     | evidence_review | Visual findings: none on ['keyboard', 'keys', 'palm rest', 'screen hinge'], severity=none
+2026-06-20 10:33:48 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the keyboard and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:33:48 | INFO     | evidence_review | Risk flags: none
+2026-06-20 10:33:48 | INFO     | evidence_review | Claim status: contradicted – The keyboard is visible in image(s): img_1, but no water_damage is observed. Visible damage does not support the claim.
+2026-06-20 10:33:48 | INFO     | evidence_review | Processing claim 13/44 for user user_019
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:33:50 | ERROR    | evidence_review | Claim parsing failed after retries: Invalid json output: Here is the JSON requested:
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-20 10:33:50 | INFO     | evidence_review | Parsed intent: unknown on unknown
+2026-06-20 10:33:50 | INFO     | evidence_review | Loaded 3 images
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:11 | INFO     | evidence_review | Visual findings: broken_part on ['keyboard', 'side casing', 'hinge', 'port', 'screen', 'keyboard', 'trackpad', 'chassis', 'lid', 'keyboard', 'side panel', 'ports'], severity=high
+2026-06-20 10:34:11 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:11 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_angle;blurry_image
+2026-06-20 10:34:11 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:11 | INFO     | evidence_review | Processing claim 14/44 for user user_020
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:13 | INFO     | evidence_review | Parsed intent: crack on trackpad
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:13 | INFO     | evidence_review | Loaded 1 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:18 | INFO     | evidence_review | Visual findings: none on ['keyboard', 'trackpad'], severity=none
+2026-06-20 10:34:18 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the trackpad and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:18 | INFO     | evidence_review | Risk flags: user_history_risk
+2026-06-20 10:34:18 | INFO     | evidence_review | Claim status: contradicted – The trackpad is visible in image(s): img_1, but no crack is observed. Visible damage does not support the claim.
+2026-06-20 10:34:18 | INFO     | evidence_review | Processing claim 15/44 for user user_025
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:20 | INFO     | evidence_review | Parsed intent: missing_part on laptop keyboard keys
+2026-06-20 10:34:20 | INFO     | evidence_review | Loaded 2 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:37 | INFO     | evidence_review | Visual findings: missing_part on ['keyboard', 'keys', 'numeric keypad', 'mouse', 'wrist rest', 'keyboard', 'keys', 'key mechanism'], severity=medium
+2026-06-20 10:34:37 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the laptop keyboard keys and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:37 | INFO     | evidence_review | Risk flags: wrong_object_part
+2026-06-20 10:34:37 | INFO     | evidence_review | Claim status: supported – The claimed missing_part on laptop keyboard keys is visible in image(s): img_2.
+2026-06-20 10:34:37 | INFO     | evidence_review | Processing claim 16/44 for user user_026
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:39 | INFO     | evidence_review | Parsed intent: crack on outer body
+2026-06-20 10:34:39 | INFO     | evidence_review | Loaded 1 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:55 | INFO     | evidence_review | Visual findings: unknown on [], severity=none
+2026-06-20 10:34:55 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the outer body. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:55 | INFO     | evidence_review | Risk flags: wrong_object;wrong_object_part;user_history_risk
+2026-06-20 10:34:55 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the outer body. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:34:55 | INFO     | evidence_review | Processing claim 17/44 for user user_027
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:57 | INFO     | evidence_review | Parsed intent: stain on screen
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:34:57 | INFO     | evidence_review | Loaded 2 images
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:14 | INFO     | evidence_review | Visual findings: stain on ['screen', 'keyboard', 'screen', 'keyboard', 'trackpad'], severity=high
+2026-06-20 10:35:14 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the screen and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:35:14 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_angle;blurry_image;user_history_risk
+2026-06-20 10:35:14 | INFO     | evidence_review | Claim status: supported – The claimed stain on screen is visible in image(s): img_1, img_2.
+2026-06-20 10:35:14 | INFO     | evidence_review | Processing claim 18/44 for user user_028
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:16 | INFO     | evidence_review | Parsed intent: broken_part on hinge
+2026-06-20 10:35:16 | INFO     | evidence_review | Loaded 1 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:20 | INFO     | evidence_review | Visual findings: broken_part on ['hinge', 'screen', 'keyboard', 'side panel'], severity=high
+2026-06-20 10:35:20 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the hinge and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:35:20 | INFO     | evidence_review | Risk flags: blurry_image;user_history_risk;manual_review_required
+2026-06-20 10:35:20 | INFO     | evidence_review | Claim status: supported – The claimed broken_part on hinge is visible in image(s): img_1.
+2026-06-20 10:35:20 | INFO     | evidence_review | Processing claim 19/44 for user user_029
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:22 | INFO     | evidence_review | Parsed intent: crushed_packaging on package corner
+2026-06-20 10:35:22 | INFO     | evidence_review | Loaded 2 images
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:32 | INFO     | evidence_review | Visual findings: crushed_packaging on ['front', 'top flap', 'bottom flap', 'side', 'corner', 'seal tape', 'fragile sticker', 'top flap', 'front panel', 'side panel', 'corner'], severity=high
+2026-06-20 10:35:32 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the package corner and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:35:32 | INFO     | evidence_review | Risk flags: wrong_object_part
+2026-06-20 10:35:32 | INFO     | evidence_review | Claim status: supported – The claimed crushed_packaging on package corner is visible in image(s): img_1, img_2.
+2026-06-20 10:35:32 | INFO     | evidence_review | Processing claim 20/44 for user user_030
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:34 | INFO     | evidence_review | Parsed intent: torn_packaging on package seal side
+2026-06-20 10:35:34 | INFO     | evidence_review | Loaded 1 images
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:39 | INFO     | evidence_review | Visual findings: torn_packaging on ['front of package', 'top seal', 'barcode label', 'QR code label', 'warning label', 'hands'], severity=high
+2026-06-20 10:35:39 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the package seal side and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:35:39 | INFO     | evidence_review | Risk flags: wrong_object_part
+2026-06-20 10:35:39 | INFO     | evidence_review | Claim status: supported – The claimed torn_packaging on package seal side is visible in image(s): img_1.
+2026-06-20 10:35:39 | INFO     | evidence_review | Processing claim 21/44 for user user_031
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:35:41 | INFO     | evidence_review | Parsed intent: water_damage on label
+2026-06-20 10:35:41 | INFO     | evidence_review | Loaded 3 images
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:02 | INFO     | evidence_review | Visual findings: water_damage on ['top flap', 'side panel', 'seal tape', 'shipping label', 'delivery label', 'cardboard box', 'top flap', 'front panel', 'top flap', 'shipping label', 'seal tape', 'bottom edge'], severity=high
+2026-06-20 10:36:02 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the label and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:02 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:36:02 | INFO     | evidence_review | Claim status: supported – The claimed water_damage on label is visible in image(s): img_1, img_2, img_3.
+2026-06-20 10:36:02 | INFO     | evidence_review | Processing claim 22/44 for user user_032
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:04 | INFO     | evidence_review | Parsed intent: missing_part on product
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:04 | INFO     | evidence_review | Loaded 2 images
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:15 | INFO     | evidence_review | Visual findings: torn_packaging on ['top flap', 'side panel', 'seal tape', 'cardboard box', 'top flap', 'shredded paper filler', 'fabric pouch', 'dried orange slice', 'cinnamon stick', 'glass jar', 'metal lid', 'wooden deer ornament'], severity=high
+2026-06-20 10:36:15 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the product. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:15 | INFO     | evidence_review | Risk flags: low_light_or_glare;blurry_image;wrong_object_part;claim_mismatch;manual_review_required
+2026-06-20 10:36:15 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the product. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:15 | INFO     | evidence_review | Processing claim 23/44 for user user_034
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:18 | ERROR    | evidence_review | Claim parsing failed after retries: Invalid json output: Here is the JSON
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-20 10:36:18 | INFO     | evidence_review | Parsed intent: unknown on unknown
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:18 | INFO     | evidence_review | Loaded 2 images
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:30 | INFO     | evidence_review | Visual findings: torn_packaging on ['top flap', 'side panel', 'corner', 'shipping label', 'top flap', 'side panel', 'seal tape'], severity=high
+2026-06-20 10:36:30 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:30 | INFO     | evidence_review | Risk flags: low_light_or_glare;user_history_risk
+2026-06-20 10:36:30 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:30 | INFO     | evidence_review | Processing claim 24/44 for user user_036
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:31 | INFO     | evidence_review | Parsed intent: water_damage on delivery box
+2026-06-20 10:36:31 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:41 | INFO     | evidence_review | Visual findings: water_damage on ['top flap', 'front side', 'right side', 'corners', 'seal tape', 'packing list label'], severity=medium
+2026-06-20 10:36:41 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the delivery box. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:41 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:36:41 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the delivery box. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:41 | INFO     | evidence_review | Processing claim 25/44 for user user_037
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:43 | INFO     | evidence_review | Parsed intent: crushed_packaging on package
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:43 | INFO     | evidence_review | Loaded 1 images
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:52 | INFO     | evidence_review | Visual findings: crushed_packaging on ['top flap', 'side panels', 'corners', 'seal tape', 'barcode'], severity=high
+2026-06-20 10:36:52 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the package. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:52 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_object_part;user_history_risk;manual_review_required
+2026-06-20 10:36:52 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the package. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:36:52 | INFO     | evidence_review | Processing claim 26/44 for user user_038
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:36:54 | INFO     | evidence_review | Parsed intent: broken_part on item inside
+2026-06-20 10:36:54 | INFO     | evidence_review | Loaded 2 images
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:17 | ERROR    | evidence_review | Vision call failed after retries: Expecting value: line 1 column 357 (char 356)
+2026-06-20 10:37:17 | INFO     | evidence_review | Visual findings: unknown on ['top flap', 'front panel', 'left side panel', 'seal tape', 'corners'], severity=high
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:17 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the item inside. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:37:17 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_object_part
+2026-06-20 10:37:17 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the item inside. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:37:17 | INFO     | evidence_review | Processing claim 27/44 for user user_039
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:19 | INFO     | evidence_review | Parsed intent: stain on package
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:19 | INFO     | evidence_review | Loaded 1 images
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:26 | INFO     | evidence_review | Visual findings: stain on ['top flap', 'side panel'], severity=high
+2026-06-20 10:37:26 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the package. Requirement: The affected package surface or label should be visible clearly enough to assess stain, water damage, label readability, or label damage.
+2026-06-20 10:37:26 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:37:26 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the package. Requirement: The affected package surface or label should be visible clearly enough to assess stain, water damage, label readability, or label damage.
+2026-06-20 10:37:26 | INFO     | evidence_review | Processing claim 28/44 for user user_040
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:37:29 | ERROR    | evidence_review | Claim parsing failed after retries: Invalid json output: Here is the JSON requested:
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langchain/errors/OUTPUT_PARSING_FAILURE 
+2026-06-20 10:37:29 | INFO     | evidence_review | Parsed intent: unknown on unknown
+2026-06-20 10:37:29 | INFO     | evidence_review | Loaded 3 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:38:02 | INFO     | evidence_review | Visual findings: torn_packaging on ['top flap', 'side panel', 'top lid', 'Apple logo', 'cardboard box', 'top flap', 'side panel', 'foam insert', 'shipping label', 'barcode', 'address text', 'FedEx logo'], severity=medium
+2026-06-20 10:38:02 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:38:02 | INFO     | evidence_review | Risk flags: wrong_object;user_history_risk;manual_review_required
+2026-06-20 10:38:02 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the unknown. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:38:02 | INFO     | evidence_review | Processing claim 29/44 for user user_041
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:38:04 | INFO     | evidence_review | Parsed intent: broken_part on front bumper
+2026-06-20 10:38:04 | INFO     | evidence_review | Loaded 3 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:38:33 | INFO     | evidence_review | Visual findings: broken_part on ['front bumper', 'front fender', 'headlight', 'fog light area', 'wheel', 'tire', 'hood', 'windshield', 'wiper blade', 'grille', 'Nissan logo', 'front fender', 'headlight', 'front wheel', 'hood', 'front bumper', 'amber reflector', 'hood', 'front fender', 'front wheel', 'headlight', 'front bumper bar', 'grille area'], severity=high
+2026-06-20 10:38:33 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the front bumper and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:38:33 | INFO     | evidence_review | Risk flags: low_light_or_glare;manual_review_required
+2026-06-20 10:38:33 | INFO     | evidence_review | Claim status: supported – The claimed broken_part on front bumper is visible in image(s): img_3.
+2026-06-20 10:38:33 | INFO     | evidence_review | Processing claim 30/44 for user user_042
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:38:35 | INFO     | evidence_review | Parsed intent: crack on rear bumper
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:38:35 | INFO     | evidence_review | Loaded 2 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:02 | INFO     | evidence_review | Visual findings: broken_part on ['rear bumper', 'trunk lid', 'taillight', 'rear wheel', 'rear bumper', 'rear quarter panel', 'taillight'], severity=high
+2026-06-20 10:39:02 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the rear bumper and allows assessment. Requirement: The claimed glass, light, mirror, or component should be visible clearly enough to inspect cracks, breakage, or missing parts.
+2026-06-20 10:39:02 | INFO     | evidence_review | Risk flags: claim_mismatch;manual_review_required
+2026-06-20 10:39:02 | INFO     | evidence_review | Claim status: contradicted – The rear bumper is visible in image(s): img_1, img_2, but no crack is observed. Visible damage does not support the claim.
+2026-06-20 10:39:02 | INFO     | evidence_review | Processing claim 31/44 for user user_043
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:04 | INFO     | evidence_review | Parsed intent: unknown on car body panel
+2026-06-20 10:39:04 | INFO     | evidence_review | Loaded 1 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:11 | INFO     | evidence_review | Visual findings: none on ['front bumper', 'side panel', 'wheels', 'roof', 'hood', 'rear spoiler'], severity=none
+2026-06-20 10:39:11 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the car body panel. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:39:11 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:39:11 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the car body panel. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:39:11 | INFO     | evidence_review | Processing claim 32/44 for user user_044
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:12 | INFO     | evidence_review | Parsed intent: broken_part on screen
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:12 | INFO     | evidence_review | Loaded 2 images
+⠋ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:25 | INFO     | evidence_review | Visual findings: glass_shatter on ['screen', 'keyboard', 'screen', 'keyboard', 'trackpad'], severity=high
+2026-06-20 10:39:25 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the screen and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:39:25 | INFO     | evidence_review | Risk flags: claim_mismatch;user_history_risk;manual_review_required
+2026-06-20 10:39:25 | INFO     | evidence_review | Claim status: contradicted – The screen is visible in image(s): img_1, img_2, but no broken_part is observed. Visible damage does not support the claim.
+2026-06-20 10:39:25 | INFO     | evidence_review | Processing claim 33/44 for user user_045
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:27 | INFO     | evidence_review | Parsed intent: crack on laptop lid
+2026-06-20 10:39:27 | INFO     | evidence_review | Loaded 2 images
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:44 | INFO     | evidence_review | Visual findings: crack on ['screen', 'bezel', 'frame', 'laptop lid', 'bottom chassis', 'side ports'], severity=high
+2026-06-20 10:39:44 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_2) shows the laptop lid and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:39:44 | INFO     | evidence_review | Risk flags: user_history_risk
+2026-06-20 10:39:44 | INFO     | evidence_review | Claim status: contradicted – The laptop lid is visible in image(s): img_2, but no crack is observed. Visible damage does not support the claim.
+2026-06-20 10:39:44 | INFO     | evidence_review | Processing claim 34/44 for user user_047
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:45 | INFO     | evidence_review | Parsed intent: dent on left side door
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:46 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:58 | INFO     | evidence_review | Visual findings: dent on ['front left door', 'rear left door', 'door handle', 'side mirror', 'door panel', 'door handle', 'armrest', 'speaker grille'], severity=high
+2026-06-20 10:39:58 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the left side door. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:39:58 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk;manual_review_required
+2026-06-20 10:39:58 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the left side door. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:39:58 | INFO     | evidence_review | Processing claim 35/44 for user user_046
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:39:59 | INFO     | evidence_review | Parsed intent: broken_part on left side mirror
+2026-06-20 10:39:59 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:20 | INFO     | evidence_review | Visual findings: broken_part on ['left side mirror', 'front fender', 'front door', 'side window', 'front wheel', 'left side mirror', 'car body', 'car door', 'window frame'], severity=high
+2026-06-20 10:40:20 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the left side mirror and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:40:20 | INFO     | evidence_review | Risk flags: user_history_risk
+2026-06-20 10:40:20 | INFO     | evidence_review | Claim status: supported – The claimed broken_part on left side mirror is visible in image(s): img_1.
+2026-06-20 10:40:20 | INFO     | evidence_review | Processing claim 36/44 for user user_034
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:21 | INFO     | evidence_review | Parsed intent: crushed_packaging on package
+2026-06-20 10:40:21 | INFO     | evidence_review | Loaded 2 images
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:34 | INFO     | evidence_review | Visual findings: crushed_packaging on ['top flap', 'front panel', 'side panel', 'seal tape', 'corners', 'top flap', 'side panel', 'corner', 'seal tape', 'Amazon logo'], severity=high
+2026-06-20 10:40:34 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the package. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:40:34 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:40:34 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the package. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:40:34 | INFO     | evidence_review | Processing claim 37/44 for user user_042
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:36 | INFO     | evidence_review | Parsed intent: dent on rear_bumper
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:36 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:53 | INFO     | evidence_review | Visual findings: none on ['rear window', 'taillight', 'rear bumper', 'rear bumper', 'taillight', 'rear window'], severity=none
+2026-06-20 10:40:53 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the rear_bumper and allows assessment. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:40:53 | INFO     | evidence_review | Risk flags: low_light_or_glare;wrong_object_part;manual_review_required
+2026-06-20 10:40:53 | INFO     | evidence_review | Claim status: contradicted – The rear_bumper is visible in image(s): img_1, img_2, but no dent is observed. Visible damage does not support the claim.
+2026-06-20 10:40:53 | INFO     | evidence_review | Processing claim 38/44 for user user_022
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:55 | INFO     | evidence_review | Parsed intent: crack on screen
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:40:55 | INFO     | evidence_review | Loaded 2 images
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:08 | INFO     | evidence_review | Visual findings: crack on ['screen', 'keyboard', 'trackpad', 'screen', 'keyboard', 'trackpad', 'bezel'], severity=high
+2026-06-20 10:41:08 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the screen and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:41:08 | INFO     | evidence_review | Risk flags: none
+2026-06-20 10:41:08 | INFO     | evidence_review | Claim status: supported – The claimed crack on screen is visible in image(s): img_1.
+2026-06-20 10:41:08 | INFO     | evidence_review | Processing claim 39/44 for user user_016
+⠙ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:10 | INFO     | evidence_review | Parsed intent: dent on car door
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:10 | INFO     | evidence_review | Loaded 3 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:37 | INFO     | evidence_review | Visual findings: dent on ['front door', 'rear door', 'front fender', 'rear fender', 'front bumper', 'rear bumper', 'front wheel', 'rear wheel', 'side mirror', 'windows', 'door handles', 'side molding', 'headlight', 'taillight', 'front door', 'rear door', 'door handle', 'window', 'rocker panel', 'side mirror', 'car door', 'door handle'], severity=high
+2026-06-20 10:41:37 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_3) shows the car door and allows assessment. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:41:37 | INFO     | evidence_review | Risk flags: low_light_or_glare;user_history_risk;manual_review_required
+2026-06-20 10:41:37 | INFO     | evidence_review | Claim status: supported – The claimed dent on car door is visible in image(s): img_3.
+2026-06-20 10:41:37 | INFO     | evidence_review | Processing claim 40/44 for user user_033
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:38 | INFO     | evidence_review | Parsed intent: crushed_packaging on package_corner
+2026-06-20 10:41:38 | INFO     | evidence_review | Loaded 2 images
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:57 | INFO     | evidence_review | Visual findings: crushed_packaging on ['outer packaging', 'inner packaging', 'hand', 'front panel', 'side panel', 'top flaps', 'bottom corner', 'shipping label'], severity=medium
+2026-06-20 10:41:57 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_2) shows the package_corner and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:41:57 | INFO     | evidence_review | Risk flags: blurry_image;wrong_object_part;user_history_risk
+2026-06-20 10:41:57 | INFO     | evidence_review | Claim status: supported – The claimed crushed_packaging on package_corner is visible in image(s): img_2.
+2026-06-20 10:41:57 | INFO     | evidence_review | Processing claim 41/44 for user user_045
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:59 | INFO     | evidence_review | Parsed intent: missing_part on key
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:41:59 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:28 | INFO     | evidence_review | Visual findings: missing_part on ['keyboard', 'keys', 'screen', 'external keyboard', 'top case', 'hinge'], severity=medium
+2026-06-20 10:42:28 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the key and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:42:28 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:42:28 | INFO     | evidence_review | Claim status: supported – The claimed missing_part on key is visible in image(s): img_1.
+2026-06-20 10:42:28 | INFO     | evidence_review | Processing claim 42/44 for user user_041
+⠸ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:29 | INFO     | evidence_review | Parsed intent: scratch on front bumper
+2026-06-20 10:42:30 | INFO     | evidence_review | Loaded 1 images
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:40 | INFO     | evidence_review | Visual findings: scratch on ['side panel', 'seat', 'rear wheel', 'exhaust', 'footrest', 'rear light'], severity=medium
+2026-06-20 10:42:40 | INFO     | evidence_review | Evidence standard met: False – None of the submitted images clearly show the front bumper. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:42:40 | INFO     | evidence_review | Risk flags: wrong_object;wrong_object_part;manual_review_required
+2026-06-20 10:42:40 | INFO     | evidence_review | Claim status: not_enough_information – None of the submitted images clearly show the front bumper. Requirement: The claimed car panel or bumper should be visible from an angle where surface marks or deformation can be assessed.
+2026-06-20 10:42:40 | INFO     | evidence_review | Processing claim 43/44 for user user_040
+⠼ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:41 | INFO     | evidence_review | Parsed intent: torn_packaging on package seal
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:42 | INFO     | evidence_review | Loaded 2 images
+⠹ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:55 | INFO     | evidence_review | Visual findings: torn_packaging on ['top flap', 'front side', 'right side', 'seal tape', 'shipping label', 'top flap', 'front side', 'left side', 'seal tape'], severity=high
+2026-06-20 10:42:55 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the package seal and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:42:55 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk;manual_review_required
+2026-06-20 10:42:55 | INFO     | evidence_review | Claim status: supported – The claimed torn_packaging on package seal is visible in image(s): img_1.
+2026-06-20 10:42:55 | INFO     | evidence_review | Processing claim 44/44 for user user_045
+⠇ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:56 | INFO     | evidence_review | Parsed intent: dent on laptop corner
+⠏ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:42:56 | INFO     | evidence_review | Loaded 2 images
+⠴ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:43:14 | INFO     | evidence_review | Visual findings: dent on ['laptop lid', 'laptop base', 'corner', 'top lid', 'corner', 'Dell logo'], severity=medium
+2026-06-20 10:43:14 | INFO     | evidence_review | Evidence standard met: True – At least one image (img_1) shows the laptop corner and allows assessment. Requirement: The submitted images should provide visual evidence that is usable, relevant to the claim, and grounded in the claimed object.
+2026-06-20 10:43:14 | INFO     | evidence_review | Risk flags: wrong_object_part;user_history_risk
+2026-06-20 10:43:14 | INFO     | evidence_review | Claim status: supported – The claimed dent on laptop corner is visible in image(s): img_2.
+Wrote 44 records to output\output.csv
+⠦ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%2026-06-20 10:43:14 | INFO     | evidence_review | Finished processing. Output written to output\output.csv
+⠧ Processing claims... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   0%
+                    Pipeline Summary                     
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+┃ User ID  ┃ Status                 ┃ Issue             ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+│ user_002 │ not_enough_information │ scratch           │
+│ user_005 │ supported              │ dent              │
+│ user_004 │ supported              │ glass_shatter     │
+│ user_007 │ contradicted           │ none              │
+│ user_008 │ supported              │ dent              │
+│ user_003 │ not_enough_information │ dent              │
+│ user_011 │ supported              │ broken_part       │
+│ user_004 │ not_enough_information │ dent              │
+│ user_018 │ not_enough_information │ broken_part       │
+│ user_014 │ supported              │ crack             │
+│ user_017 │ supported              │ glass_shatter     │
+│ user_018 │ contradicted           │ none              │
+│ user_019 │ not_enough_information │ broken_part       │
+│ user_020 │ contradicted           │ none              │
+│ user_025 │ supported              │ missing_part      │
+│ user_026 │ not_enough_information │ unknown           │
+│ user_027 │ supported              │ stain             │
+│ user_028 │ supported              │ broken_part       │
+│ user_029 │ supported              │ crushed_packaging │
+│ user_030 │ supported              │ torn_packaging    │
+│ user_031 │ supported              │ water_damage      │
+│ user_032 │ not_enough_information │ torn_packaging    │
+│ user_034 │ not_enough_information │ torn_packaging    │
+│ user_036 │ not_enough_information │ water_damage      │
+│ user_037 │ not_enough_information │ crushed_packaging │
+│ user_038 │ not_enough_information │ unknown           │
+│ user_039 │ not_enough_information │ stain             │
+│ user_040 │ not_enough_information │ torn_packaging    │
+│ user_041 │ supported              │ broken_part       │
+│ user_042 │ contradicted           │ broken_part       │
+│ user_043 │ not_enough_information │ none              │
+│ user_044 │ contradicted           │ glass_shatter     │
+│ user_045 │ contradicted           │ crack             │
+│ user_047 │ not_enough_information │ dent              │
+│ user_046 │ supported              │ broken_part       │
+│ user_034 │ not_enough_information │ crushed_packaging │
+│ user_042 │ contradicted           │ none              │
+│ user_022 │ supported              │ crack             │
+│ user_016 │ supported              │ dent              │
+│ user_033 │ supported              │ crushed_packaging │
+│ user_045 │ supported              │ missing_part      │
+│ user_041 │ not_enough_information │ scratch           │
+│ user_040 │ supported              │ torn_packaging    │
+│ user_045 │ supported              │ dent              │
+└──────────┴────────────────────────┴───────────────────┘
+PS C:\Users\Der Krieger Goose\Downloads\hackerrank-orchestrate-june26-main\Multi-Modal Orchestrate> 
+
+
+
+
+
+
+
+
